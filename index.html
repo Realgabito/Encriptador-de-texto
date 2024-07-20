@@ -7,9 +7,39 @@
     <title>Encriptador de Texto</title>
   </head>
 
-  
   <body>
-      
+      <div class="encriptador">
+        
+        <textarea
+          name="texto"
+          class="encriptador__texto"
+          id="encriptador__texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui">
+        </textarea>
+
+        <div class="encriptador__importante">
+          <p>Solo letras minusculas y sin acentos</p>
+        </div>
+      </div>
+
+      <div class="encriptador__botones">
+        <button type="submit" class="boton__encriptar" onclick="encriptarTexto();">
+          Encriptar
+        </button>
+        <button type="submit" class="boton__desencriptar" onclick="desencriptarTexto();">
+          Desencriptar
+        </button>
+      </div>
+
+      <div class="encriptador__rectangulo">
+
+        <div class="mensaje__encriptado" style="visibility: visible;">
+          <h2>Ningun mensaje fue encontrado</h2>
+          <p>Ingrese el texto que desea encriptar o desencriptar</p>
+        </div>
+      </div>
   </body>
 
   
