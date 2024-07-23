@@ -106,7 +106,7 @@ body {
     font-size: 24px;
     line-height: 120%;
     text-align: center;
-    color: ;
+    color: #495057 ;
 }
 
 .mensaje__encriptado p {
@@ -117,7 +117,7 @@ body {
     font-size: 16px;
     line-height: 150%;
     text-align: center;
-    color: ;
+    color: #495057 ;
 }
 
 .encriptador__importante {
@@ -128,7 +128,8 @@ body {
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 85%;
+    top: 83%;
+    gap: 8px;
 }
 
 .encriptador__importante img {
@@ -149,3 +150,56 @@ body {
     flex-grow: 0;
 }
 
+.encriptador__botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 85%;
+    gap: 24px;
+}
+
+.boton__encriptar {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #E9ECF8;
+}
+
+.boton__desencriptar {
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+}
+
+.boton__encriptar:hover, 
+.boton__desencriptar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8;
+    cursor: progress;
+}
