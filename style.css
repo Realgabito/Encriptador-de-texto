@@ -84,10 +84,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1%;
     gap: 16px;
     width: 100%;
-    top: 40%;
     text-align: center;
     padding: 20px;
 }
@@ -96,6 +94,7 @@ body {
     height: 304px;
     width: 336px;
     border-radius: 0px;
+    object-fit: cover;
 }
 
 .mensaje__encriptado h2 {
@@ -110,7 +109,7 @@ body {
 }
 
 .mensaje__encriptado p {
-    width: 80%;
+    width: 60%;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -118,6 +117,7 @@ body {
     line-height: 150%;
     text-align: center;
     color: #495057 ;
+    
 }
 
 .encriptador__importante {
@@ -202,4 +202,44 @@ body {
     width: 24.5%;
     padding: 1.8;
     cursor: progress;
+}
+
+.mensaje {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    border-radius: 32px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    position: absolute;
+    text-align: center;
+}
+
+.boton__copiar {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    left: 40%;
+    top: 90%;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    background-color: #0A3871;
+    border-radius: 24px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF; 
+}
+
+.boton__copiar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8;
 }
