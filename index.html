@@ -39,18 +39,20 @@
 
       <div class="encriptador__rectangulo">
 
-          <div class="rectangulo__mensaje" style="visibility: hidden;">
+          <div class="rectangulo__mensaje" id="rectangulo__mensaje" style="visibility: hidden">
             <textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="20"></textarea>
               <button type="button" class="boton__copiar" onclick="copiarPortapapeles()">
                 Copiar
               </button>
           </div>
 
-        <div class="mensaje__encriptado" style="visibility: visible;">
+        <div class="mensaje__encriptado" id="mensaje__encriptado" style="visibility: visible">
           <img src="./assets/Muñeco.png" id="dibujo" class="dibujo">
-          <h2>Ningun mensaje fue encontrado</h2>
-          <p>Ingrese el texto que desea encriptar o desencriptar</p>
+          <h2 id="rectangulo__h2">Ningun mensaje fue encontrado</h2>
+          <p id='rectangulo__parrafo'>Ingrese el texto que desea encriptar o desencriptar</p>
         </div>
       </div>
+
+      <script src="app.js"></script>
   </body>
 </html>
