@@ -206,40 +206,43 @@ body {
 
 .mensaje {
     width: 90%;
-    height: 90%;
-    left: 5%;
-    top: 5%;
+    height: 80%;
+    left: 1%;
+    top: 1%;
+    padding: 16px;
     border-radius: 32px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
+    font-size: 24px;
+    line-height: 32px;
     position: absolute;
-    text-align: center;
+    color: #495057;
+    border:none ;
 }
 
 .boton__copiar {
     position: absolute;
-    width: 10%;
-    height: 5%;
-    left: 40%;
-    top: 90%;
+    width: 50%;
+    height: 10%;
+    left: 25%;
+    top: 87%;
     align-items: center;
     justify-content: center;
     padding: 2%;
     gap: 8px;
-    background-color: #0A3871;
+    background-color: white;
     border-radius: 24px;
+    border: 1px solid #0A3871;
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     line-height: 19px;
     text-align: center;
-    color: #FFFFFF; 
+    color: #0A3871; 
 }
 
 .boton__copiar:hover {
     margin: 0.3%;
-    width: 24.5%;
+    width: 49.5%;
     padding: 1.8;
 }
