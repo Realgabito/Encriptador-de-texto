@@ -6,12 +6,12 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: white;
 }
 
 .encriptador {
-    width: 100vw;
-    height: 100vh;
     background-color: #F3F5FC;
     display: flex;
     /* flex-direction: row; */
@@ -292,12 +292,16 @@ body {
     }
 
     .encriptador__rectangulo {
-        position: absolute;
-        width: 688px;
-        height: auto;
-        left: 40px;
-        top: 85%;
+        position: relative; /* Change to relative */
+        width: 90%; /* Adjust width to fit within the screen */
+        height: auto; /* Allow height to adjust based on content */
+        left: auto; /* Reset left position */
+        top: 40%; /* Reset top position */
+        margin-top: 20px; /* Add margin for spacing */
         border: 1px solid black;  
+        padding: 20px; /* Add padding for inner content */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        overflow: hidden;
     }
 
     .mensaje__encriptado {
@@ -307,7 +311,7 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 60%;
+        height: auto;
     }
 
     .mensaje__encriptado h2, 
@@ -316,7 +320,8 @@ body {
     }   
 
     .mensaje {
-      
+        width: 90%;
+      height: auto;
     }
 
     .boton__copiar {
