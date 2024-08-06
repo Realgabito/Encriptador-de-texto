@@ -18,8 +18,8 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    margin: 0 auto;
-    position: relative;
+    margin: 0%;
+    position: absolute;
 }
 
 .logo {
@@ -66,16 +66,16 @@ body {
 .encriptador__rectangulo {
     background: white;
     width: 30%;
-    height: 90%;
+    height: 92%;
     left: 60%;
-    top: 5%;
+    top: 40px;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     position: absolute;
     text-align: center;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    border: none;
     align-items: center;
 }
 
@@ -128,7 +128,7 @@ body {
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 83%;
+    top: 78%;
     gap: 8px;
 }
 
@@ -158,7 +158,7 @@ body {
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 85%;
+    top: 80%;
     gap: 24px;
 }
 
@@ -201,32 +201,37 @@ body {
     margin: 0.3%;
     width: 24.5%;
     padding: 1.8;
-    cursor: progress;
+    cursor: pointer;
 }
 
 .mensaje {
-    width: 90%;
-    height: 80%;
-    left: 1%;
-    top: 1%;
-    padding: 16px;
+    width: 80%;
+    height: 70%;
+    left: 5%;
+    top: 3%;
+    padding: 32px;
     border-radius: 32px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 36px;
     position: absolute;
     color: #495057;
     border:none ;
 }
 
+.mensaje:active, .mensaje:focus {
+    border: none;
+    outline: none;
+}
+
 .boton__copiar {
     position: absolute;
-    width: 50%;
+    width: 70%;
     height: 10%;
-    left: 25%;
-    top: 87%;
+    left: 15%;
+    top: 84%;
     align-items: center;
     justify-content: center;
     padding: 2%;
@@ -243,6 +248,83 @@ body {
 
 .boton__copiar:hover {
     margin: 0.3%;
-    width: 49.5%;
+    width: 69.5%;
     padding: 1.8;
+    cursor: pointer;
 }
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .encriptador {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .logo {
+        position: absolute;
+        width: 31.09px;
+        height: 50.58px;
+        left: 40px;
+        top: 73.42px;
+        
+    }
+
+    .encriptador__texto {
+        top: 25%;
+        height: 30%;
+        width: 90%;
+        overflow: visible;
+    }
+
+    .encriptador__importante {
+        top: 68%;
+    }
+
+    .encriptador__botones{
+        position: absolute;
+        top: 70%;
+        left: 40px;
+        width: 688px;
+        
+    }
+
+    .encriptador__rectangulo img {
+        display: none;
+    }
+
+    .encriptador__rectangulo {
+        position: absolute;
+        width: 688px;
+        height: auto;
+        left: 40px;
+        top: 85%;
+        border: 1px solid black;  
+    }
+
+    .mensaje__encriptado {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 60%;
+    }
+
+    .mensaje__encriptado h2, 
+    .mensaje__encriptado p {
+        width: 100%;
+    }   
+
+    .mensaje {
+      
+    }
+
+    .boton__copiar {
+        top: 70%;
+    }
+}
+
+
+
+
+
