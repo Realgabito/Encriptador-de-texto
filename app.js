@@ -62,10 +62,20 @@ function desencriptarTexto() {
 function copiarPortapapeles() {
     let textoaCopiar = document.getElementById('mensaje');
     textoaCopiar.select();
-    textoaCopiar.setSelectionRange(0, 99999); // For mobile devices
+    textoaCopiar.setSelectionRange(0, 99999); // Para telefonos celulares
     navigator.clipboard.writeText(textoaCopiar.value).then(() => {
         alert('Texto copiado al portapapeles');
     }).catch(err => {
         console.error('Error al copiar el texto: ', err);
     });
+}
+
+
+
+// Esta función se ejecuta cuando la página se carga
+window.onload = function() {
+    // Selecciona el textarea por su ID
+    var textarea = document.getElementById('encriptador__texto');
+    // Elimina los espacios en blanco al principio y al final del contenido
+    textarea.value = textarea.value.trim();
 }
