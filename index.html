@@ -41,18 +41,29 @@
       </section>
 
       <section>
+        <div class="rectangulo">
+
+          <img src="assets/Muñeco.png" alt="Muñeco" class="Muñeco" id="Muñeco">
+
+          <div class="rectangulo_texto">  
+            <h2>Ningun texto fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+          
         <textarea 
           name="mensaje" 
           id="mensaje" 
           class="mensaje" 
-          cols="30" rows="20">
+          cols="30" rows="20"
+          visibility: hidden>
         </textarea>
 
-        <div>
-          <button type="button" class="boton__copiar" onclick="copiarPortapapeles()">
-            Copiar
-          </button>
-        </div>
+          <div>
+            <button type="button" class="boton__copiar" onclick="copiarPortapapeles()" visibility: hidden >
+              Copiar
+            </button>
+          </div>
+        </div>  
       </section>
 
 
