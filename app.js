@@ -1,78 +1,60 @@
-function visibilidadElemento(id, visible) {
-    let elemento = document.getElementById(id);
-    elemento.style.visibility = visible ? 'visible' : 'hidden';
-}
+  // Mostrar texto encriptado/desencriptado y manejar visibilidad
+  function mostrarTextoEncriptado(texto) {
+    const rectanguloTexto = document.getElementById('rectangulo_texto');
+    const mensaje = document.getElementById('mensaje');
+    const botonCopiar = document.querySelector('.boton__copiar');
+    
+    // Ocultar el div .rectangulo_texto
+    rectanguloTexto.style.visibility = 'hidden';
+    
+    // Mostrar el textarea y el botón de copiar
+    mensaje.style.visibility = 'visible';
+    botonCopiar.style.visibility = 'visible';
+    
+    // Colocar el texto en el textarea
+    mensaje.value = texto;
+  }
+  
 
-
+// Encriptar texto
 function encriptarTexto() {
-    let texto = document.getElementById('encriptador__texto').value;
-    let mensajeEncriptado = document.getElementById('mensaje');
+    const texto = document.getElementById('encriptador__texto').value;
+    const textoEncriptado = texto
+      .replace(/e/g, 'enter')
+      .replace(/i/g, 'imes')
+      .replace(/a/g, 'ai')
+      .replace(/o/g, 'ober')
+      .replace(/u/g, 'ufat');
+    
+    mostrarTextoEncriptado(textoEncriptado);
+  }
+  
+  // Desencriptar texto
+  function desencriptarTexto() {
+    const texto = document.getElementById('encriptador__texto').value;
+    const textoDesencriptado = texto
+      .replace(/enter/g, 'e')
+      .replace(/imes/g, 'i')
+      .replace(/ai/g, 'a')
+      .replace(/ober/g, 'o')
+      .replace(/ufat/g, 'u');
+    
+    mostrarTextoEncriptado(textoDesencriptado);
+  }
+  
 
-    let textoTemporal = texto
-    .replace(/a/gi, "#a#")
-    .replace(/e/gi, "#e#")
-    .replace(/i/gi, "#i#")
-    .replace(/o/gi, "#o#")
-    .replace(/u/gi, "#u#");
+  // Copiar al portapapeles
+  function copiarPortapapeles() {
+    const mensaje = document.getElementById('mensaje');
+    mensaje.select();
+    document.execCommand('copy');
+    
+    // Mensaje de confirmación opcional
+    alert('Texto copiado al portapapeles!');
+  }
+  
 
-    let textoCifrado = textoTemporal
-    .replace(/#a#/gi, "ai")
-    .replace(/#e#/gi, "enter")
-    .replace(/#i#/gi, "imes")
-    .replace(/#o#/gi, "ober")
-    .replace(/#u#/gi, "ufat");
-
-    if(texto.length !== 0) {
-        mensajeEncriptado.value = textoCifrado;
-        visibilidadElemento("rectangulo__mensaje", true);
-        visibilidadElemento("mensaje__encriptado", false);
-
-    } else {
-        visibilidadElemento("rectangulo__mensaje", false);
-        visibilidadElemento("mensaje__encriptado", true);
-    }
-}
-
-function desencriptarTexto() {
-    let texto = document.getElementById('encriptador__texto').value;
-    let mensajeEncriptado = document.getElementById('mensaje');
-
-
-    let textoTemporal = texto 
-    .replace(/ai/gi, "#a#")
-    .replace(/enter/gi, "#e#")
-    .replace(/imes/gi, "#i#")
-    .replace(/ober/gi, "#o#")
-    .replace(/ufat/gi, "#u#");
-
-    let textoDescifrado = textoTemporal
-    .replace(/#a#/gi, "a")
-    .replace(/#e#/gi, "e")
-    .replace(/#i#/gi, "i")
-    .replace(/#o#/gi, "o")
-    .replace(/#u#/gi, "u");
-
-    if (texto.length != 0) {
-        mensajeEncriptado.value = textoDescifrado;
-        visibilidadElemento("rectangulo__mensaje", true);
-        visibilidadElemento("mensaje__encriptado", false);
-    }
-}
-
-function copiarPortapapeles() {
-    let textoaCopiar = document.getElementById('mensaje');
-    textoaCopiar.select();
-    textoaCopiar.setSelectionRange(0, 99999); // Para telefonos celulares
-    navigator.clipboard.writeText(textoaCopiar.value).then(() => {
-        alert('Texto copiado al portapapeles');
-    }).catch(err => {
-        console.error('Error al copiar el texto: ', err);
-    });
-}
-
-
-
-// Esta función se ejecuta cuando la página se carga
+  // Esta función se ejecuta cuando la página se carga
 window.onload = function() {
     // Selecciona el textarea por su ID
     var textarea = document.getElementById('encriptador__texto');
