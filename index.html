@@ -43,9 +43,10 @@
       <section>
         <div class="rectangulo">
 
-          <img src="assets/Muñeco.png" alt="Muñeco" class="Muñeco" id="Muñeco">
+          
 
-          <div class="rectangulo_texto">  
+          <div class="rectangulo_texto" id="rectangulo_texto" style="visibility: visible;"> 
+            <img src="assets/Muñeco.png" alt="Muñeco" class="Muñeco" id="Muñeco" > 
             <h2>Ningun texto fue encontrado</h2>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
           </div>
@@ -55,22 +56,23 @@
           id="mensaje" 
           class="mensaje" 
           cols="30" rows="20"
-          visibility: hidden>
+          style="visibility: hidden;">
         </textarea>
 
           <div>
-            <button type="button" class="boton__copiar" onclick="copiarPortapapeles()" visibility: hidden >
+            <button type="button" class="boton__copiar" onclick="copiarPortapapeles()" style="visibility: hidden;" >
               Copiar
             </button>
           </div>
         </div>  
       </section>
 
-
+      
     </main>
 
       
-
-      <script src="app.js"></script>
+    
+    
   </body>
+  <script src="app.js"></script>
 </html>
