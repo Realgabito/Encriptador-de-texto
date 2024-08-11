@@ -114,20 +114,42 @@ main {
 }
 
 .rectangulo_texto {
+    display: flex;
+    flex-direction: column;
     position: fixed;
+    left: 10%;
+    align-items: center;
     width: 336px;
     height: 122px;
-    top: 619px;
+    top: 20%;
+    gap: 24px;
+}
+
+.rectangulo_texto h2 {
+    font-family: "inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    color: #343A40;
+}
+
+.rectangulo_texto p {
+    font-family: "inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #495057;
 }
 
 
 
 .Muñeco {
-    position: absolute;
     width: 336px;
     height: 304px;
-    top: 223px;
-    left: 10%;
+
+
 }
 
 .mensaje {
