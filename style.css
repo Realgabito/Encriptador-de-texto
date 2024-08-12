@@ -116,7 +116,7 @@ main {
 .rectangulo_texto {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: relative;
     left: 10%;
     align-items: center;
     width: 336px;
@@ -188,4 +188,68 @@ main {
     text-align: center;
     line-height: 19.36px;
     color: #0A3871;
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        flex-direction: column;    
+        margin-left: 0;
+        width: auto;
+    }
+
+    
+
+
+    .logo {
+        width: auto;
+    }
+
+
+
+    /* Center the text in the rectangle */
+    .rectangulo_texto {
+        left: 5%;
+        align-items: center; 
+        justify-content: center;
+        width: 100%;
+        max-width: 90%;
+        
+    }
+
+
+    .encriptador__botones {
+        flex-direction: row; 
+        gap: 16px;
+        z-index: 1;
+    }
+
+    .rectangulo {
+        width: 80%; 
+        max-height: 688px;
+        top: 85% ;
+        left: 10%;
+        padding: 0px;
+        
+    }
+
+    .rectangulo img {
+        display: none;
+    }
+
+    .mensaje {
+        width: 100%; 
+        position: absolute;
+        height:30% ;
+        max-width: 90%; 
+        overflow: scroll;
+        overflow-wrap: break-word;
+        
+
+    }
+
+    .boton__copiar {
+        
+        left: 30%;
+    }
 }
