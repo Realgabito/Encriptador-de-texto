@@ -211,13 +211,20 @@ footer {
         overflow-x: hidden;
     }
 
+    .encriptador__texto {
+        position: relative;
+        left: 10%;
+        height: auto;
+        overflow-y: scroll;
+    }
+
     .rectangulo {
         position: relative;
         left: 10%;
         width: 80%;
-        height: auto;
+        height: 400px;
         max-height: 688px;
-        top: 880px;
+     
     }
 
     .rectangulo img {
@@ -225,15 +232,31 @@ footer {
     }
 
     .rectangulo_texto {
+        position: relative;
+        top: 150px;
+        left: 25%;
+    }
+    
+    .mensaje {
+        height: 200px;
+
+    }
+
+    .boton__copiar {
+        position: relative;
+        top: 200px;
+        left: 25%;
     }
 
     .encriptador__importante {
         left: 12%;
         width: auto;
+        top:auto ;
     }
     .encriptador__botones {
         left: 12%;
         width: 80%;
+        top: auto;
     }
 
 
