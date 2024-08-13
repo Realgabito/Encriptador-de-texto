@@ -5,6 +5,7 @@
     const botonCopiar = document.querySelector('.boton__copiar');
     
     // Ocultar el div .rectangulo_texto
+    Muñeco.style.visibility = 'hidden';
     rectanguloTexto.style.visibility = 'hidden';
     
     // Mostrar el textarea y el botón de copiar
