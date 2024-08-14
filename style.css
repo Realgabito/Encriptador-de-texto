@@ -13,8 +13,7 @@
 body, html {
     height: 100vw;
     width: 100dvh;
-
-    scroll-behavior: smooth;
+    
 }
 
 .logo {
@@ -201,29 +200,34 @@ footer {
 }
 
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1025px) {
 
     /* Ajustes generales */
     body, html {
         width: 100vw;
         height: 100dvh;
         font-size: 18px; /* Reduce ligeramente el tamaño de la fuente */
-        overflow-x: hidden;
+        overflow-y: visible;
+        overflow-x: visible;
+        
     }
 
     .encriptador__texto {
         position: relative;
+        top: 100px;
         left: 10%;
         height: auto;
-        overflow-y: scroll;
+        max-height: fit-content;
+        overflow-y: hidden;
     }
 
     .rectangulo {
         position: relative;
-        left: 10%;
-        width: 80%;
+        left: 5%;
+        width: 90%;
         height: 400px;
         max-height: 688px;
+        top: 190px;
      
     }
 
@@ -249,15 +253,82 @@ footer {
     }
 
     .encriptador__importante {
-        left: 12%;
+        left: 10%;
         width: auto;
-        top:auto ;
+        top:auto;
+        top: 110px;
     }
     .encriptador__botones {
-        left: 12%;
+        left: 10%;
         width: 80%;
         top: auto;
+        top: 130px;
     }
 
 
+}
+
+@media (max-width: 600px) {
+        /* Ajustes generales */
+        body, html {
+            width: 100vw;
+            height: 100dvh;
+            font-size: 18px; /* Reduce ligeramente el tamaño de la fuente */
+            overflow-y: visible;
+            overflow-x: visible;
+            
+        }
+    
+        .encriptador__texto {
+            position: relative;
+            top: 100px;
+            left: 10%;
+            height: auto;
+            max-height: fit-content;
+            overflow-y: hidden;
+        }
+    
+        .rectangulo {
+            position: relative;
+            left: 5%;
+            width: 90%;
+            height: 300px;
+            top: 170px;
+         
+        }
+    
+        .rectangulo img {
+            display: none;
+        }
+    
+        .rectangulo_texto {
+            position: relative;
+            top: 150px;
+            left: 5%;
+        }
+        
+        .mensaje {
+            height: 150px;
+    
+        }
+    
+        .boton__copiar {
+            position: relative;
+            top: 115px;
+            left: 5%;
+        }
+    
+        .encriptador__importante {
+            left: 10%;
+            width: auto;
+            top:auto;
+            top: 110px;
+        }
+        .encriptador__botones {
+            flex-direction: column;
+            left: 10%;
+            width: 90%;
+            top: auto;
+            top: 130px;
+        }
 }
