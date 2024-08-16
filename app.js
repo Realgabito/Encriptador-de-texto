@@ -4,7 +4,7 @@
     const mensaje = document.getElementById('mensaje');
     const botonCopiar = document.querySelector('.boton__copiar');
     
-    // Ocultar el div .rectangulo_texto
+    if (texto.trim() !== '') {
     Muñeco.style.visibility = 'hidden';
     rectanguloTexto.style.visibility = 'hidden';
     
@@ -14,6 +14,13 @@
     
     // Colocar el texto en el textarea
     mensaje.value = texto;
+    } else {
+      mensaje.style.visibility = 'hidden';
+      botonCopiar.style.visibility = 'hidden';
+
+      Muñeco.style.visibility ='visible';
+      rectanguloTexto.style.visibility = 'visible';
+    }
   }
   
 
