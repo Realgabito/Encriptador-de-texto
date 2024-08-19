@@ -1,11 +1,30 @@
+// Validar texto para que solo contenga letras minúsculas
+function validarTexto(texto) {
+  
+  // Permitir solo letras minúsculas y espacios
+  const regex = /^[a-z\s]+$/;
+  return regex.test(texto);
+}
+
+// Filtrar la entrada del usuario para aceptar solo letras minúsculas y espacios
+function filtrarEntrada(event) {
+  const key = event.key;
+  if (!/[a-z\s]/.test(key)) {
+
+    // Evitar la entrada de caracteres no permitidos
+    event.preventDefault(); 
+  }
+}
+
+  
   // Mostrar texto encriptado/desencriptado y manejar visibilidad
   function mostrarTextoEncriptado(texto) {
     const rectanguloTexto = document.getElementById('rectangulo_texto');
     const mensaje = document.getElementById('mensaje');
     const botonCopiar = document.querySelector('.boton__copiar');
     
-    if (texto.trim() !== '') {
-    Muñeco.style.visibility = 'hidden';
+    if (texto.trim() !== '' && validarTexto(texto)) {
+    muñeco.style.visibility = 'hidden';
     rectanguloTexto.style.visibility = 'hidden';
     
     // Mostrar el textarea y el botón de copiar
@@ -18,8 +37,10 @@
       mensaje.style.visibility = 'hidden';
       botonCopiar.style.visibility = 'hidden';
 
-      Muñeco.style.visibility ='visible';
+      muñeco.style.visibility ='visible';
       rectanguloTexto.style.visibility = 'visible';
+
+      
     }
   }
   
