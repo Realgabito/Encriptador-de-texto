@@ -78,7 +78,7 @@ function encriptarTexto() {
     mensaje.select();
     document.execCommand('copy');
     
-    // Mensaje de confirmación opcional
+    // Mensaje de confirmación
     alert('Texto copiado al portapapeles!');
   }
   
